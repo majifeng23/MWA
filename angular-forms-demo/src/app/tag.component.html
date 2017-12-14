@@ -1,0 +1,7 @@
+<form><input type="text" #tag>
+    <button type="button" (click)="addTag(tag)"> Add Tag</button>
+    <ul class="list-group list-inline">
+        <li *ngFor="let t of tags.controls" class="list-group-item"> {{t.value}} <span
+                class="glyphicon glyphicon-remove" (click)="removeTag(t)"></span></li>
+    </ul>
+</form>

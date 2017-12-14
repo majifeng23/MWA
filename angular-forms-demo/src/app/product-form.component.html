@@ -1,0 +1,18 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div class="form-group">
+        <label for="product_name">Product Name</label>
+        <input required [forbiddenName]="'best'"  ngModel name="product_name" #productName="ngModel" #spy (change)="log(productName)" id="product_name"
+               type="text" class="form-control">
+        {{spy.className}}
+    </div>
+    <div class="form-group">
+        <div class="alert alert-danger" *ngIf="productName.touched && !productName.valid">
+            <div *ngIf="productName.errors.required">Product Name is required.</div>
+            <div *ngIf="productName.errors.forbiddenName">Product Name is forbidden.</div>
+        </div>
+
+        <label for="description">Description</label>
+        <textarea ngModel name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>

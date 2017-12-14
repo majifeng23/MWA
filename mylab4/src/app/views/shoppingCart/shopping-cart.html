@@ -1,0 +1,8 @@
+<div style="  display: flex; flex-direction:row; flex-grow:3;  justify-content: space-around;  
+ margin-left:10px;margin-right:10px;
+height:50px;line-height:50px">
+    <button style="justify-content:center;border-style:solid;border-width:0.5px;
+            border-radius:5px;" (click)='addItemToCart()'>Add to Cart </button>
+    <p>Add {{product}}:{{shoppingCount}}</p>
+    <p>Should Pay:{{product|calculate:shoppingCount}}</p>
+</div>

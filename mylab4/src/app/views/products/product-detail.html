@@ -1,0 +1,22 @@
+<div style="border-style: solid;border-width: 1px;">
+    <h1>the Detail of the {{dataDetail.name}}:</h1>
+    <div style="  display: flex; flex-direction:row; flex-grow:3;  justify-content: space-around;  
+    border-style: solid;border-width: 1px; margin-left:10px;margin-right:10px;
+    height:25px;line-height:25px" >
+        <div>name</div>
+        <div>Price</div>
+        <div>Description</div>
+        <button> </button>
+    </div>
+
+    <div style="  display: flex; flex-direction:row; flex-grow:3;  justify-content: space-around;  
+    border-style: solid;border-width: 1px; margin-left:10px;margin-right:10px;margin-bottom:10px;
+    height:50px;line-height:50px;background-color:grey" >
+        <div>{{dataDetail.name}}</div>
+        <div>{{dataDetail.price}}$</div>
+        <div>{{dataDetail.description}}</div>
+        <button (click)="deleteDetail()">Delete</button>
+    </div>
+    <shopping-cart [product]='dataDetail.name'></shopping-cart>
+</div>
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,13 @@
+
+    <div style="border-style: solid;border-width: 1px;border-color:green">
+        <ul>
+            <li *ngFor='let product of products; let i = index'>
+                    {{i+1}}:<button (click)="showDetail(product)">{{product}}</button>                
+                    <!-- <a [routerLink]="['/detail',{ product: product }]" routerLinkActive="active">
+                        {{product}}</a> -->
+                        
+            </li>
+        </ul>
+        <product-detail *ngIf= isShow [product]="dataDetail" (onDelete)="onDetailDelete()"></product-detail> 
+    </div>
+    <!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,23 @@
+<form #paymentForm="ngForm" (ngSubmit)="submit(paymentForm)">
+    <fieldset ngModelGroup="contact">
+        <label>First Name
+            <input type="text" name="firstname" ngModel>
+        </label>
+        <label>Last Name
+            <input type="text" name="lastname" ngModel>
+        </label>
+
+    </fieldset>
+    <fieldset ngModelGroup="payment">
+        <label>Card Type
+            <input type="text" name="card-type" ngModel>
+        </label>
+        <label>Card Number
+            <input type="text" name="card-number" ngModel >
+        </label>
+
+    </fieldset>
+    <button>Submit</button>
+
+</form>
+
